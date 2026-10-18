@@ -6,9 +6,7 @@ A from-scratch implementation of a hash table with **separate chaining**, writte
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/badge/build-make-blue)
 ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
-
 ---
-
 ## ✨ Features
 
 - **Header-only** — just `#include "HashMap.hpp"`.
