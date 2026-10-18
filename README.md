@@ -1,4 +1,4 @@
-# HashMap — a template hash table in C++20
+# HashMap - a template hash table in C++20
 
 A from-scratch implementation of a hash table with **separate chaining**, written as a header-only template class in modern C++20. Built as a systems-programming exercise: manual memory management, the Rule of Five, custom forward iterators, and STL-compatible interfaces.
 
