@@ -26,7 +26,7 @@ A from-scratch implementation of a hash table with **separate chaining**, writte
 
 | Tool | Version |
 | --- | --- |
-| Compiler | GCC 10+ or Clang 12+ (needs C++20) |
+| Compiler | GCC 10+ or Clang 12+ |
 | Build system | GNU Make |
 | OS | Linux |
 
@@ -97,7 +97,7 @@ g++ -std=c++20 -Isrc main.cpp -o app
 
 ## 🧪 Tests
 
-The project ships with a self-contained test suite in `src/main.cpp`, built on `assert` — no external test framework required.
+The project ships with a self-contained test suite in `src/main.cpp`, built on `assert` - no external test framework required.
 
 ```bash
 make
@@ -143,9 +143,9 @@ All tests passed successfully!
 ## ⚙️ Implementation notes
 
 - **Default bucket count:** `8`. **Max load factor:** `0.75`. When exceeded, the table rehashes to `bucket_count * 2`.
-- **Collisions** are resolved by prepending to the bucket's linked list — O(1) insertion at the head.
+- **Collisions** are resolved by prepending to the bucket's linked list - O(1) insertion at the head.
 - **Iteration order** is unspecified and depends on hashing and bucket layout, exactly like `std::unordered_map`.
-- **Moved-from objects** are left in a valid empty state (`buckets == nullptr`, `size() == 0`) and remain fully usable — insertions re-initialize the table lazily.
+- **Moved-from objects** are left in a valid empty state (`buckets == nullptr`, `size() == 0`) and remain fully usable - insertions re-initialize the table lazily.
 - **Hashing** is fixed to `std::hash<Key>`; a custom hasher is not currently a template parameter.
 
 ### Complexity
