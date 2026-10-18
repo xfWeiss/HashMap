@@ -6,17 +6,19 @@ A from-scratch implementation of a hash table with **separate chaining**, writte
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/badge/build-make-blue)
 ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
+
 ---
+
 ## ✨ Features
 
-- **Header-only** — just `#include "HashMap.hpp"`.
+- **Header-only** - just `#include "HashMap.hpp"`.
 - **Separate chaining** collision resolution with singly linked lists per bucket.
-- **Automatic rehashing** — bucket count doubles once the load factor exceeds `0.75`.
-- **Full Rule of Five** — copy/move constructors and assignment operators with correct self-assignment handling and moved-from safety.
-- **STL-style interface** — `insert`, `insert_or_assign`, `operator[]`, `at`, `erase`, `contains`, `find`, `clear`, `size`, `empty`.
-- **Forward iterators** — both `iterator` and `const_iterator`, with conversion from non-const to const, working with range-based `for` and standard algorithms (`std::for_each`, `std::find_if`, `std::count_if`, ...).
-- **Exception safety on lookup** — `at()` throws `std::out_of_range` for missing keys.
-- **Hashing via `std::hash<Key>`** — works with any key type that has a standard hash specialization and `operator==`.
+- **Automatic rehashing** - bucket count doubles once the load factor exceeds `0.75`.
+- **Full Rule of Five** - copy/move constructors and assignment operators with correct self-assignment handling and moved-from safety.
+- **STL-style interface** - `insert`, `insert_or_assign`, `operator[]`, `at`, `erase`, `contains`, `find`, `clear`, `size`, `empty`.
+- **Forward iterators** - both `iterator` and `const_iterator`, with conversion from non-const to const, working with range-based `for` and standard algorithms (`std::for_each`, `std::find_if`, `std::count_if`, ...).
+- **Exception safety on lookup** - `at()` throws `std::out_of_range` for missing keys.
+- **Hashing via `std::hash<Key>`** - works with any key type that has a standard hash specialization and `operator==`.
 
 ---
 
